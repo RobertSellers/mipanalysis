@@ -1,11 +1,11 @@
-Package: mapapp
+Package: mip_analysis
 Type: Package
-Title: create basic country maps
-Version: 1.0
-Date: 2017-05-13
-Author: Jeroen Ooms
-Maintainer: Jeroen <jeroen@berkeley.edu>
-Description: Create pretty country map
+Title: analyze mip data
+Version: 0.1
+Date: 2018-01-18
+Author: RobertSellers
+Maintainer: Robert <robert.sellers@azimuth1.com>
+Description: Analyze MIP environmental data
 License: Apache2
 LazyData: true
 Imports:

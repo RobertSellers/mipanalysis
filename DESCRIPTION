@@ -1,13 +1,11 @@
-Package: mip_analyses
+Package: mipAnalyses
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Date: 2018-01-18
-Author: RobertSellers
+Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: Apache2
+License: What license is it under?
+Encoding: UTF-8
 LazyData: true
-Imports:
-    rworldmap

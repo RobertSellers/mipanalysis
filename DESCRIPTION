@@ -6,7 +6,8 @@ Date: 2018-01-18
 Author: RobertSellers
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.License: Apache2
+    Use four spaces when indenting paragraphs within the Description.
+License: Apache2
 LazyData: true
 Imports:
     rworldmap

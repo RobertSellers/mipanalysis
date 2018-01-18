@@ -9,5 +9,5 @@ Or to run the app locally in R:
   ```r
 #load the app
 library(opencpu)
-ocpu_start_app('rwebapps/mapapp')
+ocpu_start_app('RobertSellers/mip_analyses')
 ```

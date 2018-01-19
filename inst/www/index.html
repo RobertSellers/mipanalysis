@@ -32,9 +32,7 @@ $(document).ready(function() {
 
       $("#successdiv").empty();
       $("#errordiv").empty()
-      // $("#convert_button").attr("disabled", "disabled");
-      
-      //call uploaddata function
+
       var req = ocpu.call("uploaddata", {
         mipfile : $("#mipfile")[0].files[0]   
       }, function(session){
@@ -46,19 +44,6 @@ $(document).ready(function() {
     }
   });
   
-  $('#water_level').on('input propertychange paste', function() {
-          //call uploaddata function
-    var req = ocpu.call("mip_calculations", {
-        mipfile : $(this).attr('href')+'R/.val/tab'
-      }, function(session){
-        $("#convert_button").removeAttr("disabled");
-      }).fail(function(jqXHR){
-        errormsg(jqXHR.responseText);
-    })
-  })
-
-
-  
   function successmsg(text){
     $("#successdiv").empty().append('<div class="alert alert-success alert-dismissable"><a href="#" class="close" data-dismiss="alert">&times;</a>' + text + '</div>');
   }
@@ -68,6 +53,14 @@ $(document).ready(function() {
   }  
     
   $("#convert_button").on("click", function(){
+
+    var req = ocpu.call("mip_calculations", {
+        mipfile : $(this).attr('href')+'R/.val/tab'
+      }, function(session){
+        $("#convert_button").removeAttr("disabled");
+      }).fail(function(jqXHR){
+        errormsg(jqXHR.responseText);
+    })
 
     var zip = new JSZip();
 
@@ -82,7 +75,6 @@ $(document).ready(function() {
           zip.file(filename+'.mhp', d)
           zip.generateAsync({type:"blob"})
           .then(function(content) {
-              // see FileSaver.js
               saveAs(content, zipname);
           });
       });

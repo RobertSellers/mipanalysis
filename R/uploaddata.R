@@ -1,5 +1,5 @@
 uploaddata <- function(mipfile, ...){
-  if(substring(tolower(mipfile), nchar(mipfile)-3) != ".csv"){
+  if(substring(tolower(mipfile), nchar(mipfile)-3) != ".mhp"){
     stop('Uploaded data needs to be .mhp file. ');
   }
   

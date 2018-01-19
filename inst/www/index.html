@@ -61,10 +61,13 @@ $(document).ready(function() {
 
     var zip = new JSZip();
     
-    $.get($(this).attr('href')+'files', function(f){
+    file_names = $(this).attr('href')+'files'
+    data_file = $(this).attr('href')+'R/.val/tab'
+
+    $.get(file_names, function(f){
       zipname = f.split('\n')[0]
       filename = zipname.substr(0, f.split('\n')[0].length -8);
-        $.get($(this).attr('href')+'R/.val/tab', function(d){
+        $.get(data_file, function(d){
           debugger
           zip.file(filename+'.mhp', d)
           zip.generateAsync({type:"blob"})

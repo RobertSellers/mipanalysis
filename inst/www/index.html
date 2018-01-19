@@ -10,6 +10,7 @@
 <script src="opencpu/jquery-1.10.2.min.js"> </script>
 <script src="opencpu/opencpu-0.4.js"> </script>
 <script src="jszip/jszip.min.js"> </script>
+<script src="filesaver/FileSaver.js"> </script>
 
 <!-- some optional styling stuff -->
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -24,6 +25,8 @@
 $(document).ready(function() {
   
   //globals
+  var data_url;
+  var file_name;
   // var dataframe;
   // var mapdata;
   // var joincode;
@@ -43,7 +46,15 @@ $(document).ready(function() {
       var req = ocpu.call("uploaddata", {
         mipfile : $("#mipfile")[0].files[0]   
       }, function(session){
-        $("#convert_button").attr("href", session.getLoc() + "R/.val/csv")
+        data_url = session.getLoc() + "R/.val/csv"
+        zip.file(csv_url,"sup\n")
+        var img = zip.folder("images");
+        zip.generateAsync({type:"blob"})
+        .then(function(content) {
+            // see FileSaver.js
+            saveAs(content, "example.zip");
+        });
+        // $("#convert_button").attr("href", session.getLoc() + "R/.val/csv")
         $("#convert_button").removeAttr("disabled");
         // dataframe = session;
       }).fail(function(jqXHR){

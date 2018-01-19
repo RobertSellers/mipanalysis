@@ -62,7 +62,7 @@ $(document).ready(function() {
     var zip = new JSZip();
     
     $.get($(this).attr('href')+'files', function(f){
-      filename = f.split('\n')[0].substr(0,d.split('\n')[0].length -8);
+      filename = f.split('\n')[0].substr(0, f.split('\n')[0].length -8);
         $.get($(this).attr('href')+'R/.val/tab', function(d){
           debugger
           zip.file(filename, d)

@@ -62,14 +62,15 @@ $(document).ready(function() {
     var zip = new JSZip();
     
     $.get($(this).attr('href')+'files', function(f){
-      filename = f.split('\n')[0].substr(0, f.split('\n')[0].length -8);
+      zipname = f.split('\n')[0]
+      filename = zipname.substr(0, f.split('\n')[0].length -8);
         $.get($(this).attr('href')+'R/.val/tab', function(d){
           debugger
-          zip.file(filename, d)
+          zip.file(filename+'.mhp', d)
           zip.generateAsync({type:"blob"})
           .then(function(content) {
               // see FileSaver.js
-              saveAs(content, "example.zip");
+              saveAs(content, zipname);
           });
       });
     });

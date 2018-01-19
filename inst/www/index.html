@@ -9,6 +9,7 @@
 <!-- ocpu library -->
 <script src="opencpu/jquery-1.10.2.min.js"> </script>
 <script src="opencpu/opencpu-0.4.js"> </script>
+<script src="jszip/jszip.min.js"> </script>
 
 <!-- some optional styling stuff -->
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -122,12 +123,13 @@ $(document).ready(function() {
     
   $("#convert_button").on("click", function(){
     debugger
+    csv_url = $(this).attr('href')
     // if(joincode == $("#joinCode").val() && countrycolumn == $("#nameJoinColumn").val()){
     //   //nothing has changed since last join
     //   convert_df().always(); 
     // } else {
       //first rejoin data, then make plot
-      joindata().done(convert_df);
+      // joindata().done(convert_df);
     // }
   });
   

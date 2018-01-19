@@ -23,7 +23,7 @@
 $(document).ready(function() {
   
   //globals
-  var dataframe;
+  // var dataframe;
   // var mapdata;
   // var joincode;
   // var countrycolumn;
@@ -33,31 +33,23 @@ $(document).ready(function() {
 
     //verify that a file is selected
     if($("#mipfile")[0].files[0]){
-      debugger
-      //clear state
-      dataframe = null;
-      // mapdata = null;
-      // joincode = null;
-      // countrycolumn = null;
-      // $("#nameJoinColumn").empty();  
-      // $("#nameColumnToPlot").empty();
+      myfile = $("#mipfile")[0].files[0]
+
       $("#successdiv").empty();
       $("#errordiv").empty()
       $("#convert_button").attr("disabled", "disabled");
       
       //call uploaddata function
       var req = ocpu.call("uploaddata", {
-        mipfile : $("#mipfile")[0].files[0]    
+        file : myfile   
       }, function(session){
-        dataframe = session;
-        // datainfo();
+        // dataframe = session;
       }).fail(function(jqXHR){
         errormsg(jqXHR.responseText);
       }).always(function(){
         $("#uploadform").get(0).reset();      
       });
     }
-    debugger
   });
   
   function datainfo(){

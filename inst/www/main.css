@@ -1,0 +1,11 @@
+#mipfile {
+    max-width: 197px;
+  }
+  
+  #buttondiv{
+    text-align:right;
+  }
+  
+  .progress{
+    display: none;  
+  }

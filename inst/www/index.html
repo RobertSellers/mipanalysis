@@ -126,10 +126,10 @@ $(document).ready(function() {
   }  
     
   $("#convert_button").on("click", function(){
-    debugger
+
     var zip = new JSZip();
     var img = zip.folder("images");
-    // csv_url = $(this).attr('href')
+
     zip.file($(this).attr('href'),"sup\n")
         var img = zip.folder("images");
         zip.generateAsync({type:"blob"})
@@ -137,6 +137,7 @@ $(document).ready(function() {
             // see FileSaver.js
             saveAs(content, "example.zip");
         });
+        
     // if(joincode == $("#joinCode").val() && countrycolumn == $("#nameJoinColumn").val()){
     //   //nothing has changed since last join
     //   convert_df().always(); 

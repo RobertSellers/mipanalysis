@@ -38,6 +38,7 @@ $(document).ready(function() {
       }, function(session){
         $("#convert_button").attr("href", session.getLoc())
         $("#water_level").removeAttr("disabled");
+        $("#convert_button").removeAttr("disabled");
       }).fail(function(jqXHR){
         errormsg(jqXHR.responseText);
       })
@@ -116,7 +117,7 @@ $(document).ready(function() {
           </fieldset>         
           <fieldset>
             <label>Water level</label> 
-            <input class="input-medium" id="water_level" type="number" id="max" min="0.00" max="100.00" value="5.05" />
+            <input class="input-medium" id="water_level" type="number" id="max" step="0.01" min="0" max="100" value="5" />
             
             <br />
           </fieldset>

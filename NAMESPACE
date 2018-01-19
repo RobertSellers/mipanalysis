@@ -1,6 +1,1 @@
-importFrom(rworldmap, joinCountryData2Map)
-importFrom(rworldmap, mapCountryData)
 export(uploaddata)
-export(datainfo)
-export(join)
-export(map)

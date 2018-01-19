@@ -56,6 +56,7 @@ $(document).ready(function() {
   }  
     
 function create_zip(){
+  debugger
   $.get(file_names, function(f){
     zipname = f.split('\n')[0]
     filename = zipname.substr(0, f.split('\n')[0].length -8);
@@ -80,7 +81,7 @@ function create_zip(){
     var req = ocpu.call("mip_calculations", {
         mipfile : data_file
       }, function(session){
-        create_zip(file_names, data_file)
+        create_zip(session.getLoc())
         //show plot here
         // $("#convert_button").removeAttr("disabled");
       }).fail(function(jqXHR){

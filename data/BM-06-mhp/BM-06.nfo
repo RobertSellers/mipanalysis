@@ -1,0 +1,277 @@
+***MIP Pressure Alarm Has Been Disabled*** 0.00 ft 0.000 m
+
+BM-06.zip
+
+SITE INFORMATION -- DIRECT IMAGE MIP+HPT PROBE
+
+Geoprobe DI Acquisition Software for Windows
+Version: 1.7   Build: 16064
+
+
+Pre-Log EC Load Tests
+
+Test 	Target (mS/m)	Actual (mS/m)	% Diff	P/F
+ Low	     55.0    	     54.3    	   1.3	PASS
+High	    290.0    	    290.3    	   0.1	PASS
+
+
+COMPANY: Columbia Technologies
+OPERATOR: DJM
+PROJECT ID: Palmero Wellfield
+CLIENT: GeoEngineers
+UNITS: ENGLISH
+PROBE AND ARRAY: MH6530/6532 MiHPT Probe with Top Dipole
+LOCATION: Tumwater, WA
+100 INCH STRING POT USED
+ROD LENGTH: 4 feet
+
+
+**Low Level Settings**
+Length of Increment: 1ft
+Length of Window: 0.2ft
+Time at 0 ROP: 3s
+No Flow Time: 45s
+Vent Trunkline: 50s
+Inject to Detectors: 25s
+
+
+
+
+MIP PRE-LOG RESPONSE TEST
+
+FILENAME: BM-06.pre.tim
+RESPONSE TEST START TIME: Tue Sep 20 2016 07:52:06
+
+RESPONSE TEST ATTENUATION CHANGES
+   TIME		DET1	DET2	DET3	DET4
+      0		   1	   1	   1	   1
+
+
+
+TRIP TIME: 62 sec
+Gas Used: nitrogen
+
+
+
+PRE-LOG HPT REFERENCE TEST VALUES
+
+PRE TEST TIME: Tue Sep 20 2016 07:58:54
+
+	TEST		HPT PRESSURE (psi)	FLOW (mL/min)	HPT PRESSURE (kPa)
+
+TOP with FLOW=0		 15.563			   0.0		 107.300
+TOP with FLOW>0		 15.755			 168.7		 108.630
+BOTTOM with FLOW=0	 15.344			   0.0		 105.790
+BOTTOM with FLOW>0	 15.531			 167.7		 107.090
+
+EXPECTED FLOW=0 HPT DIFF.: 0.22 psi (1.5 kPa) +/- 10%
+  ACTUAL FLOW=0 HPT DIFF.: 0.22 psi (1.5 kPa)
+
+TRANSDUCER TEST PASSED
+
+
+
+DETECTOR NAME: PID FID XSD None
+HPT IDEAL COEFFS:       2.2696e1,-2.2356
+HPT SENSOR CAL NUMBERS: XD20622A,0.0000,0.0000,0.0000,0.0000,9.9550e-1,-1.4180
+
+**Low Level Values Changed (0 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 3 s
+No Flow Time: 45 s
+Vent Trunkline: 60 s
+Inject to Detectors: 25 s
+
+
+**Low Level Values Changed (0 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 3 s
+No Flow Time: 45 s
+Vent Trunkline: 60 s
+Inject to Detectors: 25 s
+
+
+**Low Level Values Changed (0 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 3 s
+No Flow Time: 45 s
+Vent Trunkline: 55 s
+Inject to Detectors: 25 s
+
+
+**Low Level Values Changed (0 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 3 s
+No Flow Time: 45 s
+Vent Trunkline: 50 s
+Inject to Detectors: 25 s
+
+
+**Low Level Values Changed (0 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 3 s
+No Flow Time: 45 s
+Vent Trunkline: 55 s
+Inject to Detectors: 25 s
+
+
+MIP Pressure out of range (n/a psi / n/a kPa) at 0.55 ft (0.168 m)
+
+LOG START TIME: Tue Sep 20 2016 08:07:30
+
+
+MIP Pressure out of range (15.0 psi / 104 kPa) at 4.00 ft (1.219 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 5.65 ft (1.722 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 12.75 ft (3.886 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 15.40 ft (4.694 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 16.40 ft (4.999 m)
+
+
+MIP Pressure out of range (13.0 psi / 89 kPa) at 16.90 ft (5.151 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 16.90 ft (5.151 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 26.30 ft (8.016 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 27.45 ft (8.367 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 27.95 ft (8.519 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 27.95 ft (8.519 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 29.90 ft (9.114 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 32.95 ft (10.043 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 33.90 ft (10.333 m)
+
+
+MIP Pressure out of range (13.0 psi / 89 kPa) at 35.20 ft (10.729 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 35.40 ft (10.790 m)
+
+
+MIP Pressure out of range (12.9 psi / 89 kPa) at 36.30 ft (11.064 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 36.45 ft (11.110 m)
+
+
+MIP Pressure out of range (12.9 psi / 89 kPa) at 37.15 ft (11.323 m)
+
+
+MIP Pressure out of range (12.9 psi / 89 kPa) at 37.95 ft (11.567 m)
+
+
+MIP Pressure out of range (12.8 psi / 89 kPa) at 38.95 ft (11.872 m)
+
+
+MIP Pressure out of range (12.8 psi / 88 kPa) at 40.20 ft (12.253 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 41.10 ft (12.527 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 42.85 ft (13.061 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 43.05 ft (13.122 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 45.50 ft (13.868 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 49.75 ft (15.164 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 51.70 ft (15.758 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 52.80 ft (16.093 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 53.00 ft (16.154 m)
+
+
+MIP Pressure out of range (13.0 psi / 90 kPa) at 55.40 ft (16.886 m)
+
+***MIP Pressure Alarm Has Been Disabled*** 55.65 ft 16.962 m
+
+**Low Level Values Changed (76 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 5 s
+No Flow Time: 45 s
+Vent Trunkline: 55 s
+Inject to Detectors: 25 s
+
+
+**Low Level Values Changed (76.05 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 4 s
+No Flow Time: 45 s
+Vent Trunkline: 55 s
+Inject to Detectors: 25 s
+
+
+**Low Level Values Changed (76.9 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 5 s
+No Flow Time: 45 s
+Vent Trunkline: 55 s
+Inject to Detectors: 25 s
+
+ATTENUATION CHANGES
+DEPTH (ft)	DEPTH (m)	DET1	DET2	DET3	DET4
+      0.00	    0.000	   1	   1	   1	   1
+LOG END DEPTH: 89.65 ft (27.325 m)
+LOG END TIME: Tue Sep 20 2016 12:45:26
+
+LATITUDE: 0.000000000
+LONGITUDE: 0.000000000
+ELEVATION: 0.000 METERS  0.00 FEET
+GPS Quality: None
+
+
+
+MIP POST-LOG RESPONSE TEST BYPASSED
+
+
+
+
+
+
+POST-LOG HPT REFERENCE TEST VALUES
+
+POST TEST TIME: Tue Sep 20 2016 12:45:30
+
+POST-LOG HPT REFERENCE TESTS BYPASSED
+
+
+
+EC POST-LOG TESTS BYPASSED
+

@@ -1,0 +1,127 @@
+***MIP Pressure Alarm Has Been Disabled*** 0.00 ft 0.000 m
+
+BM-09.zip
+
+SITE INFORMATION -- DIRECT IMAGE MIP+HPT PROBE
+
+Geoprobe DI Acquisition Software for Windows
+Version: 1.7   Build: 16064
+
+
+Pre-Log EC Load Tests
+
+Test 	Target (mS/m)	Actual (mS/m)	% Diff	P/F
+ Low	     55.0    	     54.2    	   1.4	PASS
+High	    290.0    	    289.7    	   0.1	PASS
+
+
+COMPANY: Columbia Technologies
+OPERATOR: DJM
+PROJECT ID: Palmero Wellfield
+CLIENT: GeoEngineers
+UNITS: ENGLISH
+PROBE AND ARRAY: MH6530/6532 MiHPT Probe with Top Dipole
+LOCATION: Tumwater, WA
+100 INCH STRING POT USED
+ROD LENGTH: 4 feet
+
+
+**Low Level Settings**
+Length of Increment: 1ft
+Length of Window: 0.2ft
+Time at 0 ROP: 5s
+No Flow Time: 45s
+Vent Trunkline: 55s
+Inject to Detectors: 25s
+
+
+
+
+MIP PRE-LOG RESPONSE TEST
+
+FILENAME: BM-09.pre.tim
+RESPONSE TEST START TIME: Fri Sep 23 2016 07:41:52
+
+RESPONSE TEST ATTENUATION CHANGES
+   TIME		DET1	DET2	DET3	DET4
+      0		   1	   1	   1	   1
+
+
+
+TRIP TIME: 57 sec
+Gas Used: nitrogen
+
+
+
+PRE-LOG HPT REFERENCE TEST VALUES
+
+PRE TEST TIME: Fri Sep 23 2016 07:47:52
+
+	TEST		HPT PRESSURE (psi)	FLOW (mL/min)	HPT PRESSURE (kPa)
+
+TOP with FLOW=0		 15.537			   0.0		 107.130
+TOP with FLOW>0		 15.693			 140.2		 108.200
+BOTTOM with FLOW=0	 15.314			   0.0		 105.580
+BOTTOM with FLOW>0	 15.473			 141.4		 106.680
+
+EXPECTED FLOW=0 HPT DIFF.: 0.22 psi (1.5 kPa) +/- 10%
+  ACTUAL FLOW=0 HPT DIFF.: 0.22 psi (1.5 kPa)
+
+TRANSDUCER TEST PASSED
+
+
+
+DETECTOR NAME: PID FID XSD None
+HPT IDEAL COEFFS:       2.2696e1,-2.2356
+HPT SENSOR CAL NUMBERS: XD20622A,0.0000,0.0000,0.0000,0.0000,9.9550e-1,-1.4180
+
+**Low Level Values Changed (0 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 5 s
+No Flow Time: 45 s
+Vent Trunkline: 50 s
+Inject to Detectors: 25 s
+
+
+**Low Level Values Changed (0 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 5 s
+No Flow Time: 45 s
+Vent Trunkline: 50 s
+Inject to Detectors: 25 s
+
+LOG START TIME: Fri Sep 23 2016 07:52:22
+
+ATTENUATION CHANGES
+DEPTH (ft)	DEPTH (m)	DET1	DET2	DET3	DET4
+      0.00	    0.000	   1	   1	   1	   1
+      4.90	    1.494	   1	   1	   1	   1
+LOG END DEPTH: 4.90 ft (1.494 m)
+LOG END TIME: Fri Sep 23 2016 08:28:59
+
+LATITUDE: 0.000000000
+LONGITUDE: 0.000000000
+ELEVATION: 0.000 METERS  0.00 FEET
+GPS Quality: None
+
+
+
+MIP POST-LOG RESPONSE TEST BYPASSED
+
+
+
+
+
+
+POST-LOG HPT REFERENCE TEST VALUES
+
+POST TEST TIME: Fri Sep 23 2016 08:29:04
+
+POST-LOG HPT REFERENCE TESTS BYPASSED
+
+
+
+EC POST-LOG TESTS BYPASSED
+

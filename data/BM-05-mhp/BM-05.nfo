@@ -1,0 +1,117 @@
+
+BM-05.zip
+
+SITE INFORMATION -- DIRECT IMAGE MIP+HPT PROBE
+
+Geoprobe DI Acquisition Software for Windows
+Version: 1.7   Build: 16064
+
+
+EC PRE-LOG TESTS BYPASSED
+
+COMPANY: Columbia Technologies
+OPERATOR: DJM
+PROJECT ID: Palmero Wellfield
+CLIENT: GeoEngineers
+UNITS: ENGLISH
+PROBE AND ARRAY: MH6530/6532 MiHPT Probe with Top Dipole
+LOCATION: Tumwater, WA
+100 INCH STRING POT USED
+ROD LENGTH: 4 feet
+
+
+**Low Level Settings**
+Length of Increment: 1ft
+Length of Window: 0.2ft
+Time at 0 ROP: 3s
+No Flow Time: 45s
+Vent Trunkline: 60s
+Inject to Detectors: 25s
+
+
+
+
+MIP PRE-LOG RESPONSE TEST
+
+FILENAME: BM-05.pre.tim
+RESPONSE TEST START TIME: Mon Sep 19 2016 08:30:28
+
+RESPONSE TEST ATTENUATION CHANGES
+   TIME		DET1	DET2	DET3	DET4
+      0		   1	   1	   1	   1
+
+
+
+TRIP TIME: 55 sec
+Gas Used: nitrogen
+
+
+
+PRE-LOG HPT REFERENCE TEST VALUES
+
+PRE TEST TIME: Mon Sep 19 2016 08:30:35
+
+PRE-LOG HPT REFERENCE TESTS BYPASSED
+
+DETECTOR NAME: PID FID XSD None
+HPT IDEAL COEFFS:       2.2696e1,-2.2356
+HPT SENSOR CAL NUMBERS: XD20622A,0.0000,0.0000,0.0000,0.0000,9.9550e-1,-1.4180
+
+**Low Level Values Changed (0 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 3 s
+No Flow Time: 45 s
+Vent Trunkline: 55 s
+Inject to Detectors: 25 s
+
+
+**Low Level Values Changed (0 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 3 s
+No Flow Time: 45 s
+Vent Trunkline: 50 s
+Inject to Detectors: 25 s
+
+LOG START TIME: Mon Sep 19 2016 08:30:40
+
+
+MIP Pressure out of range (14.0 psi / 97 kPa) at 87.95 ft (26.807 m)
+
+
+MIP Pressure out of range (13.9 psi / 96 kPa) at 88.95 ft (27.112 m)
+
+
+MIP Pressure out of range (13.9 psi / 96 kPa) at 89.70 ft (27.341 m)
+
+ATTENUATION CHANGES
+DEPTH (ft)	DEPTH (m)	DET1	DET2	DET3	DET4
+      0.00	    0.000	   1	   1	   1	   1
+LOG END DEPTH: 89.70 ft (27.341 m)
+LOG END TIME: Mon Sep 19 2016 14:19:03
+
+LATITUDE: 0.000000000
+LONGITUDE: 0.000000000
+ELEVATION: 0.000 METERS  0.00 FEET
+GPS Quality: None
+
+
+
+MIP POST-LOG RESPONSE TEST BYPASSED
+
+
+
+
+
+
+POST-LOG HPT REFERENCE TEST VALUES
+
+POST TEST TIME: Mon Sep 19 2016 14:19:13
+
+POST-LOG HPT REFERENCE TESTS BYPASSED
+
+
+
+EC POST-LOG TESTS BYPASSED
+

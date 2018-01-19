@@ -1,0 +1,122 @@
+
+BM-07.zip
+
+SITE INFORMATION -- DIRECT IMAGE MIP+HPT PROBE
+
+Geoprobe DI Acquisition Software for Windows
+Version: 1.7   Build: 16064
+
+
+EC PRE-LOG TESTS BYPASSED
+
+COMPANY: Columbia Technologies
+OPERATOR: DJM
+PROJECT ID: Palmero Wellfield
+CLIENT: GeoEngineers
+UNITS: ENGLISH
+PROBE AND ARRAY: MH6530/6532 MiHPT Probe with Top Dipole
+LOCATION: Tumwater, WA
+100 INCH STRING POT USED
+ROD LENGTH: 4 feet
+
+
+**Low Level Settings**
+Length of Increment: 1ft
+Length of Window: 0.2ft
+Time at 0 ROP: 5s
+No Flow Time: 45s
+Vent Trunkline: 55s
+Inject to Detectors: 25s
+
+
+
+
+MIP PRE-LOG RESPONSE TEST BYPASSED
+
+
+
+TRIP TIME: 58 sec
+Gas Used: nitrogen
+
+
+
+PRE-LOG HPT REFERENCE TEST VALUES
+
+PRE TEST TIME: Wed Sep 21 2016 08:04:28
+
+PRE-LOG HPT REFERENCE TESTS BYPASSED
+
+DETECTOR NAME: PID FID XSD None
+HPT IDEAL COEFFS:       2.2696e1,-2.2356
+HPT SENSOR CAL NUMBERS: XD20622A,0.0000,0.0000,0.0000,0.0000,9.9550e-1,-1.4180
+LOG START TIME: Wed Sep 21 2016 08:04:33
+
+
+MIP Pressure out of range (12.7 psi / 87 kPa) at 10.00 ft (3.048 m)
+
+***MIP Temperature Alarm Has Been Disabled*** 11.00 ft 3.353 m
+
+MIP Pressure out of range (12.7 psi / 88 kPa) at 17.90 ft (5.456 m)
+
+
+MIP Pressure out of range (12.7 psi / 88 kPa) at 17.90 ft (5.456 m)
+
+
+MIP Pressure out of range (12.6 psi / 87 kPa) at 19.55 ft (5.959 m)
+
+
+MIP Pressure out of range (12.7 psi / 88 kPa) at 19.90 ft (6.066 m)
+
+
+MIP Pressure out of range (12.6 psi / 87 kPa) at 20.00 ft (6.096 m)
+
+
+MIP Pressure out of range (12.7 psi / 88 kPa) at 25.35 ft (7.727 m)
+
+
+MIP Pressure out of range (12.6 psi / 87 kPa) at 26.00 ft (7.925 m)
+
+
+MIP Pressure out of range (12.7 psi / 88 kPa) at 26.00 ft (7.925 m)
+
+
+MIP Pressure out of range (12.7 psi / 88 kPa) at 29.45 ft (8.976 m)
+
+
+MIP Pressure out of range (12.6 psi / 87 kPa) at 29.95 ft (9.129 m)
+
+
+MIP Pressure out of range (12.7 psi / 88 kPa) at 29.95 ft (9.129 m)
+
+***MIP Pressure Alarm Has Been Disabled*** 33.80 ft 10.302 m
+***MIP Temperature Alarm Has Been Enabled*** 33.90 ft 10.333 m
+ATTENUATION CHANGES
+DEPTH (ft)	DEPTH (m)	DET1	DET2	DET3	DET4
+      0.00	    0.000	   1	   1	   1	   1
+LOG END DEPTH: 89.80 ft (27.371 m)
+LOG END TIME: Wed Sep 21 2016 12:34:22
+
+LATITUDE: 0.000000000
+LONGITUDE: 0.000000000
+ELEVATION: 0.000 METERS  0.00 FEET
+GPS Quality: None
+
+
+
+MIP POST-LOG RESPONSE TEST BYPASSED
+
+
+
+
+
+
+POST-LOG HPT REFERENCE TEST VALUES
+
+POST TEST TIME: Wed Sep 21 2016 12:34:29
+
+POST-LOG HPT REFERENCE TESTS BYPASSED
+
+
+
+EC POST-LOG TESTS BYPASSED
+

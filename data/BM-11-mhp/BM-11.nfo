@@ -1,0 +1,156 @@
+
+BM-11.zip
+
+SITE INFORMATION -- DIRECT IMAGE MIP+HPT PROBE
+
+Geoprobe DI Acquisition Software for Windows
+Version: 1.7   Build: 16064
+
+
+Pre-Log EC Load Tests
+
+Test 	Target (mS/m)	Actual (mS/m)	% Diff	P/F
+ Low	     55.0    	     54.6    	   0.8	PASS
+High	    290.0    	    293.8    	   1.3	PASS
+
+
+COMPANY: Columbia Technologies
+OPERATOR: DJM
+PROJECT ID: Palmero Wellfield
+CLIENT: GeoEngineers
+UNITS: ENGLISH
+PROBE AND ARRAY: MH6530/6532 MiHPT Probe with Top Dipole
+LOCATION: Tumwater, WA
+100 INCH STRING POT USED
+ROD LENGTH: 4 feet
+
+
+**Low Level Settings**
+Length of Increment: 1ft
+Length of Window: 0.1ft
+Time at 0 ROP: 5s
+No Flow Time: 45s
+Vent Trunkline: 90s
+Inject to Detectors: 30s
+
+
+
+
+MIP PRE-LOG RESPONSE TEST
+
+FILENAME: BM-11.pre.tim
+RESPONSE TEST START TIME: Tue Sep 27 2016 07:12:40
+
+RESPONSE TEST ATTENUATION CHANGES
+   TIME		DET1	DET2	DET3	DET4
+      0		   1	   1	   1	   1
+
+
+
+TRIP TIME: 70 sec
+Gas Used: nitrogen
+
+
+
+PRE-LOG HPT REFERENCE TEST VALUES
+
+PRE TEST TIME: Tue Sep 27 2016 07:46:22
+
+	TEST		HPT PRESSURE (psi)	FLOW (mL/min)	HPT PRESSURE (kPa)
+
+TOP with FLOW=0		 15.724			   0.0		 108.410
+TOP with FLOW>0		 15.927			 172.2		 109.820
+BOTTOM with FLOW=0	 15.505			   0.0		 106.900
+BOTTOM with FLOW>0	 15.690			 171.2		 108.180
+
+EXPECTED FLOW=0 HPT DIFF.: 0.22 psi (1.5 kPa) +/- 10%
+  ACTUAL FLOW=0 HPT DIFF.: 0.22 psi (1.5 kPa)
+
+TRANSDUCER TEST PASSED
+
+
+
+DETECTOR NAME: PID FID XSD None
+HPT IDEAL COEFFS:       2.2696e1,-2.2356
+HPT SENSOR CAL NUMBERS: XD20666A,0.0000,0.0000,0.0000,0.0000,9.9430e-1,-1.4200
+LOG START TIME: Tue Sep 27 2016 07:51:14
+
+
+MIP Pressure out of range (20.3 psi / 140 kPa) at 1.95 ft (0.594 m)
+
+***MIP Pressure Alarm Has Been Disabled*** 1.95 ft 0.594 m
+Low Level Sequence Missed Between 41.9ft and 42.1ft
+
+**Low Level Values Changed (45.85 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 5 s
+No Flow Time: 45 s
+Vent Trunkline: 90 s
+Inject to Detectors: 30 s
+
+Low Level Sequence Missed Between 45.8ft and 46.2ft
+
+**Low Level Values Changed (46.95 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.1 ft
+Time at 0 ROP: 5 s
+No Flow Time: 45 s
+Vent Trunkline: 90 s
+Inject to Detectors: 30 s
+
+
+**Low Level Values Changed (46.95 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.2 ft
+Time at 0 ROP: 5 s
+No Flow Time: 45 s
+Vent Trunkline: 90 s
+Inject to Detectors: 30 s
+
+
+**Low Level Values Changed (50.95 ft)**
+Length of Increment: 1 ft
+Length of Window: 0.1 ft
+Time at 0 ROP: 5 s
+No Flow Time: 45 s
+Vent Trunkline: 90 s
+Inject to Detectors: 30 s
+
+
+Temperature out of range (79.9 deg C) at 74.00 ft (22.555 m)
+
+
+Temperature out of range (79.9 deg C) at 130.00 ft (39.624 m)
+
+***MIP Temperature Alarm Has Been Disabled*** 130.00 ft 39.624 m
+ATTENUATION CHANGES
+DEPTH (ft)	DEPTH (m)	DET1	DET2	DET3	DET4
+      0.00	    0.000	   1	   1	   1	   1
+LOG END DEPTH: 130.00 ft (39.624 m)
+LOG END TIME: Tue Sep 27 2016 16:48:35
+
+LATITUDE: 0.000000000
+LONGITUDE: 0.000000000
+ELEVATION: 0.000 METERS  0.00 FEET
+GPS Quality: None
+
+
+
+MIP POST-LOG RESPONSE TEST BYPASSED
+
+
+
+
+
+
+POST-LOG HPT REFERENCE TEST VALUES
+
+POST TEST TIME: Tue Sep 27 2016 16:48:41
+
+POST-LOG HPT REFERENCE TESTS BYPASSED
+
+
+
+EC POST-LOG TESTS BYPASSED
+

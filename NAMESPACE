@@ -1,1 +1,2 @@
 export(uploaddata)
+importFrom(janitor, clean_names)

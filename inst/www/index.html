@@ -22,6 +22,8 @@
 <script> 
 $(document).ready(function() {
   
+  $("#convert_button").attr("disabled", "disabled");
+  $("#water_level").attr("disabled", "disabled");
   //automatically upload CSV file on change.
   $("#mipfile").on("change", function(){
 
@@ -30,22 +32,32 @@ $(document).ready(function() {
 
       $("#successdiv").empty();
       $("#errordiv").empty()
-      $("#convert_button").attr("disabled", "disabled");
+      // $("#convert_button").attr("disabled", "disabled");
       
       //call uploaddata function
       var req = ocpu.call("uploaddata", {
         mipfile : $("#mipfile")[0].files[0]   
       }, function(session){
         $("#convert_button").attr("href", session.getLoc())
-        $("#convert_button").removeAttr("disabled");
+        $("#water_level").removeAttr("disabled");
       }).fail(function(jqXHR){
         errormsg(jqXHR.responseText);
-      }).always(function(){
-        // $("#uploadform").get(0).reset();      
-      });
+      })
     }
   });
   
+  $('#water_level').on('input propertychange paste', function() {
+          //call uploaddata function
+    var req = ocpu.call("mip_calculations", {
+        mipfile : $(this).attr('href')+'R/.val/tab'
+      }, function(session){
+        $("#convert_button").removeAttr("disabled");
+      }).fail(function(jqXHR){
+        errormsg(jqXHR.responseText);
+    })
+  })
+
+
   
   function successmsg(text){
     $("#successdiv").empty().append('<div class="alert alert-success alert-dismissable"><a href="#" class="close" data-dismiss="alert">&times;</a>' + text + '</div>');
@@ -112,7 +124,7 @@ $(document).ready(function() {
           </fieldset>         
           <fieldset>
             <label>Water level</label> 
-            <input class="input-medium" type="number" id="max" min="0.00" max="100.00" value="5.05" />
+            <input class="input-medium" id="water_level" type="number" id="max" min="0.00" max="100.00" value="5.05" />
             
             <br />
           </fieldset>

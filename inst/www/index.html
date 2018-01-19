@@ -42,6 +42,7 @@ $(document).ready(function() {
       var req = ocpu.call("uploaddata", {
         mipfile : $("#mipfile")[0].files[0]   
       }, function(session){
+        $("#convert_button".attr("href", session.getLoc() + "R/.val/csv"))
         // dataframe = session;
       }).fail(function(jqXHR){
         errormsg(jqXHR.responseText);

@@ -1,13 +1,13 @@
-# OpenCPU Application: mapapp
+# OpenCPU Application: mipapp
 
 To see this application live in action go to:
   
-  - https://rwebapps.ocpu.io/mapapp
+  - http://robertsellers.ocpu.io/mipAnalyses/www/
 
-Or to run the app locally in R:
-  
+Tun the app locally in R:
   ```r
 #load the app
 library(opencpu)
 ocpu_start_app('RobertSellers/mip_analyses')
 ```
+

@@ -36,22 +36,21 @@ $(document).ready(function() {
       
       //clear state
       dataframe = null;
-      mapdata = null;
-      joincode = null;
-      countrycolumn = null;
-      $("#nameJoinColumn").empty();  
-      $("#nameColumnToPlot").empty();
+      // mapdata = null;
+      // joincode = null;
+      // countrycolumn = null;
+      // $("#nameJoinColumn").empty();  
+      // $("#nameColumnToPlot").empty();
       $("#successdiv").empty();
       $("#errordiv").empty()
-      $("#plotbutton").attr("disabled", "disabled");
+      $("#convert_button").attr("disabled", "disabled");
       
       //call uploaddata function
       var req = ocpu.call("uploaddata", {
         mipfile : $("#mipfile")[0].files[0]    
       }, function(session){
-        debugger
         dataframe = session;
-        datainfo();
+        // datainfo();
       }).fail(function(jqXHR){
         errormsg(jqXHR.responseText);
       }).always(function(){
@@ -60,60 +59,61 @@ $(document).ready(function() {
     }
   });
   
-  function datainfo(){
-    return ocpu.rpc("datainfo", {mydata : dataframe}, function(jsondata){
-      $.each(jsondata.strings, function(i, val){
-        if(val){
-          $("<option>").text(val).appendTo("#nameJoinColumn");
-        }
-      });
+  // function datainfo(){
+  //   return ocpu.rpc("datainfo", {mydata : dataframe}, function(jsondata){
+  //     $.each(jsondata.strings, function(i, val){
+  //       if(val){
+  //         $("<option>").text(val).appendTo("#nameJoinColumn");
+  //       }
+  //     });
       
-      $.each(jsondata.other, function(i, val){
-        if(val){
-          $("<option>").text(val).appendTo("#nameColumnToPlot");
-        }
-      });      
-      $("#plotbutton").removeAttr("disabled");
-    }).fail(function(jqXHR){
-      errormsg(jqXHR.responseText);
-    });
-  }
+  //     $.each(jsondata.other, function(i, val){
+  //       if(val){
+  //         $("<option>").text(val).appendTo("#nameColumnToPlot");
+  //       }
+  //     });      
+  //     $("#convert_button").removeAttr("disabled");
+  //   }).fail(function(jqXHR){
+  //     errormsg(jqXHR.responseText);
+  //   });
+  // }
       
-  function joindata(e){
-    var newjoincode = $("#joinCode").val();
-    var newcountrycolumn = $("#nameJoinColumn").val();
+  // function joindata(e){
+  //   var newjoincode = $("#joinCode").val();
+  //   var newcountrycolumn = $("#nameJoinColumn").val();
     
-    $("#plotbutton").attr("disabled", "disabled");
-    return ocpu.call("join", {
-      dF : dataframe, 
-      nameJoinColumn : newcountrycolumn,
-      joinCode :newjoincode
-    }, function(session){
-      mapdata = session;
-      joincode = newjoincode;
-      countrycolumn = newcountrycolumn;
-      session.getFile("messages.txt", function(text){
-        successmsg(text);
-      });
-    }).fail(function(jqXHR){
-      errormsg(jqXHR.responseText);
-    }).always(function(){
-      $("#plotbutton").removeAttr("disabled", "disabled"); 
-    });
-  }
+  //   $("#convert_button").attr("disabled", "disabled");
+  //   return ocpu.call("join", {
+  //     dF : dataframe, 
+  //     nameJoinColumn : newcountrycolumn,
+  //     joinCode :newjoincode
+  //   }, function(session){
+  //     mapdata = session;
+  //     joincode = newjoincode;
+  //     countrycolumn = newcountrycolumn;
+  //     session.getFile("messages.txt", function(text){
+  //       successmsg(text);
+  //     });
+  //   }).fail(function(jqXHR){
+  //     errormsg(jqXHR.responseText);
+  //   }).always(function(){
+  //     $("#convert_button").removeAttr("disabled", "disabled"); 
+  //   });
+  // }
   
-  function makeplot(){
-    $("#plotbutton").attr("disabled", "disabled");
-    return $("#plotdiv").rplot("map", {
-      mapToPlot : mapdata, 
-      nameColumnToPlot : $("#nameColumnToPlot").val(),
-      colourPalette : $("#colourPalette").val(),
-      mapTitle : $("#mapTitle").val()
-    }).fail(function(jqXHR){
-      errormsg(jqXHR.responseText);
-    }).always(function(){
-      $("#plotbutton").removeAttr("disabled", "disabled");    
-    });
+  function convert_df(){
+    $("#convert_button").attr("disabled", "disabled");
+    debugger
+    // return $("#plotdiv").rplot("map", {
+    //   // mapToPlot : mapdata, 
+    //   // nameColumnToPlot : $("#nameColumnToPlot").val(),
+    //   colourPalette : $("#colourPalette").val(),
+    //   mapTitle : $("#mapTitle").val()
+    // }).fail(function(jqXHR){
+    //   errormsg(jqXHR.responseText);
+    // }).always(function(){
+    //   $("#convert_button").removeAttr("disabled", "disabled");    
+    // });
   }
   
   function successmsg(text){
@@ -124,14 +124,15 @@ $(document).ready(function() {
     $("#errordiv").empty().append('<div class="alert alert-danger alert-dismissable"><a href="#" class="close" data-dismiss="alert">&times;</a>' + text + '</div>');
   }  
     
-  $("#plotbutton").on("click", function(){
-    if(joincode == $("#joinCode").val() && countrycolumn == $("#nameJoinColumn").val()){
-      //nothing has changed since last join
-      makeplot().always(); 
-    } else {
+  $("#convert_button").on("click", function(){
+    debugger
+    // if(joincode == $("#joinCode").val() && countrycolumn == $("#nameJoinColumn").val()){
+    //   //nothing has changed since last join
+    //   convert_df().always(); 
+    // } else {
       //first rejoin data, then make plot
-      joindata().done(makeplot);
-    }
+      joindata().done(convert_df);
+    // }
   });
   
   $("#plotdiv").resizable();
@@ -149,12 +150,12 @@ $(document).ready(function() {
 </script>
 <style>
 
-#plotdiv {
+/* #plotdiv {
   width: 100%;
   height: 600px;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
-}
+} */
 
 #mipfile {
   max-width: 197px;
@@ -190,7 +191,7 @@ $(document).ready(function() {
               
           </fieldset>         
           
-          <fieldset id="datafields">
+          <!-- <fieldset id="datafields">
             
             <div class="form-group">
               <label>Country Column</label>
@@ -198,10 +199,10 @@ $(document).ready(function() {
               </select>    
             </div>
 
-          </fieldset>         
+          </fieldset>          -->
           
           <fieldset id="buttondiv">
-            <button id="plotbutton" type="button" class="btn btn-primary" disabled="disabled">Add Data</button>
+            <button id="convert_button" type="button" class="btn btn-primary" disabled="disabled">Add Data</button>
           </fieldset>
 
         </form>
@@ -217,7 +218,7 @@ $(document).ready(function() {
         <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
       </div>
      
-      <div id="plotdiv"></div>
+      <!-- <div id="plotdiv"></div> -->
 
     </div>  
   </div>

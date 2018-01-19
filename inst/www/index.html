@@ -55,7 +55,7 @@ $(document).ready(function() {
     $("#errordiv").empty().append('<div class="alert alert-danger alert-dismissable"><a href="#" class="close" data-dismiss="alert">&times;</a>' + text + '</div>');
   }  
     
-function create_zip(){
+function create_zip(temp){
   debugger
   $.get(file_names, function(f){
     zipname = f.split('\n')[0]

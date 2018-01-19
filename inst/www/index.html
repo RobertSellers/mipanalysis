@@ -46,14 +46,14 @@ $(document).ready(function() {
       var req = ocpu.call("uploaddata", {
         mipfile : $("#mipfile")[0].files[0]   
       }, function(session){
-        // data_url = session.getLoc() + "stdout/text"
+        data_url = session.getLoc() + "stdout/text"
         $("#convert_button").attr("href", data_url)
         $("#convert_button").removeAttr("disabled");
         // dataframe = session;
       }).fail(function(jqXHR){
         errormsg(jqXHR.responseText);
       }).always(function(){
-        data_url = session.getLoc() + "stdout/text"
+        // data_url = session.getLoc() + "stdout/text"
         // $("#uploadform").get(0).reset();      
       });
     }

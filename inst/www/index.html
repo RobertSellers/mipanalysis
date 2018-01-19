@@ -67,15 +67,16 @@ $(document).ready(function() {
   $("#convert_button").on("click", function(){
 
     var zip = new JSZip();
-    var img = zip.folder("images");
-    debugger
-    zip.file($(this).attr('href'),"sup\n")
-        var img = zip.folder("images");
+    
+    $.get($(this).attr('href'), function(d){
+        zip.file(d)
         zip.generateAsync({type:"blob"})
         .then(function(content) {
             // see FileSaver.js
             saveAs(content, "example.zip");
         });
+    });
+
 
   });
     

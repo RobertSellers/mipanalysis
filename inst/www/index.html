@@ -24,11 +24,6 @@
 <script> 
 $(document).ready(function() {
   
-  //globals
-  var data_url;
-  var file_name;
-  var dataframe;
-  
   //automatically upload CSV file on change.
   $("#mipfile").on("change", function(){
 
@@ -43,10 +38,8 @@ $(document).ready(function() {
       var req = ocpu.call("uploaddata", {
         mipfile : $("#mipfile")[0].files[0]   
       }, function(session){
-        data_url = session.getLoc() + "R/.val/tab"
-        $("#convert_button").attr("href", data_url)
+        $("#convert_button").attr("href", session.getLoc())
         $("#convert_button").removeAttr("disabled");
-         dataframe = session;
       }).fail(function(jqXHR){
         errormsg(jqXHR.responseText);
       }).always(function(){
@@ -68,15 +61,17 @@ $(document).ready(function() {
 
     var zip = new JSZip();
     
-    $.get($(this).attr('href'), function(d){
-        zip.file("mip.mhp",d)
-        zip.generateAsync({type:"blob"})
-        .then(function(content) {
-            // see FileSaver.js
-            saveAs(content, "example.zip");
-        });
+    $.get($(this).attr('href'+'/files'), function(d){
+      debugger
+        $.get($(this).attr('href'+'/R/.val/tab'), function(d){
+          zip.file("mip.mhp",d)
+          zip.generateAsync({type:"blob"})
+          .then(function(content) {
+              // see FileSaver.js
+              saveAs(content, "example.zip");
+          });
+      });
     });
-
 
   });
     

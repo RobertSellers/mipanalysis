@@ -55,28 +55,33 @@ $(document).ready(function() {
     $("#errordiv").empty().append('<div class="alert alert-danger alert-dismissable"><a href="#" class="close" data-dismiss="alert">&times;</a>' + text + '</div>');
   }  
     
+function create_zip(){
+  $.get(file_names, function(f){
+    zipname = f.split('\n')[0]
+    filename = zipname.substr(0, f.split('\n')[0].length -8);
+      $.get(data_file, function(d){
+        debugger
+        zip.file(filename+'.mhp', d)
+        zip.generateAsync({type:"blob"})
+        .then(function(content) {
+            saveAs(content, zipname);
+        });
+    });
+  });   
+}
+
   $("#convert_button").on("click", function(){
 
     var zip = new JSZip();
 
     file_names = $(this).attr('href')+'files'
     data_file = $(this).attr('href')+'R/.val/tab'
-
+    
     var req = ocpu.call("mip_calculations", {
         mipfile : data_file
       }, function(session){
-        $.get(file_names, function(f){
-          zipname = f.split('\n')[0]
-          filename = zipname.substr(0, f.split('\n')[0].length -8);
-            $.get(data_file, function(d){
-              debugger
-              zip.file(filename+'.mhp', d)
-              zip.generateAsync({type:"blob"})
-              .then(function(content) {
-                  saveAs(content, zipname);
-              });
-          });
-        });
+        create_zip(file_names, data_file)
+        //show plot here
         // $("#convert_button").removeAttr("disabled");
       }).fail(function(jqXHR){
         errormsg(jqXHR.responseText);
@@ -118,7 +123,7 @@ $(document).ready(function() {
               
           </fieldset>         
           <fieldset>
-            <label>Water level</label> 
+            <label>Water level (ft)</label> 
             <input class="input-medium" id="water_level" type="number" id="max" step="0.01" min="0" max="100" value="5" />
             
             <br />

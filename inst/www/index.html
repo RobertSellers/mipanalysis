@@ -47,13 +47,6 @@ $(document).ready(function() {
         mipfile : $("#mipfile")[0].files[0]   
       }, function(session){
         data_url = session.getLoc() + "R/.val/csv"
-        zip.file(csv_url,"sup\n")
-        var img = zip.folder("images");
-        zip.generateAsync({type:"blob"})
-        .then(function(content) {
-            // see FileSaver.js
-            saveAs(content, "example.zip");
-        });
         // $("#convert_button").attr("href", session.getLoc() + "R/.val/csv")
         $("#convert_button").removeAttr("disabled");
         // dataframe = session;
@@ -134,7 +127,14 @@ $(document).ready(function() {
     
   $("#convert_button").on("click", function(){
     debugger
-    csv_url = $(this).attr('href')
+    // csv_url = $(this).attr('href')
+    zip.file(csv_url,"sup\n")
+        var img = zip.folder("images");
+        zip.generateAsync({type:"blob"})
+        .then(function(content) {
+            // see FileSaver.js
+            saveAs(content, "example.zip");
+        });
     // if(joincode == $("#joinCode").val() && countrycolumn == $("#nameJoinColumn").val()){
     //   //nothing has changed since last join
     //   convert_df().always(); 

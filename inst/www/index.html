@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>OpenCPU Country Mapping App</title>
+<title>OpenCPU MIP Analysis</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -29,9 +29,10 @@ $(document).ready(function() {
   var countrycolumn;
   
   //automatically upload CSV file on change.
-  $("#csvfile").on("change", function(){
+  $("#mipfile").on("change", function(){
+    debugger
     //verify that a file is selected
-    if($("#csvfile")[0].files[0]){
+    if($("#mipfile")[0].files[0]){
       
       //clear state
       dataframe = null;
@@ -46,8 +47,9 @@ $(document).ready(function() {
       
       //call uploaddata function
       var req = ocpu.call("uploaddata", {
-        csvfile : $("#csvfile")[0].files[0]    
+        mipfile : $("#mipfile")[0].files[0]    
       }, function(session){
+        debugger
         dataframe = session;
         datainfo();
       }).fail(function(jqXHR){
@@ -154,7 +156,7 @@ $(document).ready(function() {
   border-radius: 4px;
 }
 
-#csvfile {
+#mipfile {
   max-width: 197px;
 }
 
@@ -172,7 +174,7 @@ $(document).ready(function() {
 <body>
 <div class="container">
   <div class="page-header">
-    <h1>Country Map App</h1>
+    <h1>MIP Data Analysis</h1>
   </div>
     
   <div class="row">
@@ -180,11 +182,10 @@ $(document).ready(function() {
       <div class="well">
         <form role="form" id="uploadform" enctype="multipart/form-data">
           <fieldset>
-            <legend>(1) Import Data</legend>
+            <legend>(1) Import MIP data</legend>
             
               <div class="form-group">
-                 <input type="file" id="csvfile">
-                <p class="help-block">Upload a CSV file. <a href="../R/countryExData/csv">(example data)</a></p>
+                 <input type="file" id="mipfile">
               </div>
               
           </fieldset>         
@@ -196,49 +197,8 @@ $(document).ready(function() {
               <select class="form-control" id="nameJoinColumn">        
               </select>    
             </div>
-            
-            <div class="form-group">
-              <label>Join Code</label>
-              <select class="form-control" id="joinCode">
-                <option>ISO2</option>
-                <option selected="selected">ISO3</option>
-                <option>FIPS</option>
-                <option>NAME</option>
-                <option>UN</option>
-              </select>    
-            </div>   
 
           </fieldset>         
-          
-          <fieldset id="mapfields">
-            <legend>(2) Create Map</legend>            
-            
-            <div class="form-group">
-              <label>Plot Column</label>
-              <select class="form-control" id="nameColumnToPlot">
-              </select>   
-            </div>
-            
-            <div class="form-group">
-              <label>Color Palette</label>
-              <select class="form-control" id="colourPalette">
-                <option selected="selected">heat</option>
-                <option>diverging</option>
-                <option>white2Black</option>
-                <option>black2White</option>
-                <option>topo</option>
-                <option>rainbow</option>
-                <option>terrain</option>
-                <option>negpos8</option>             
-              </select>    
-            </div>   
-            
-            <div class="form-group">
-              <label>Map Title</label>  
-              <input class="form-control" id="mapTitle" type="text" placeholder="My Plot">
-            </div>
-            
-          </fieldset>
           
           <fieldset id="buttondiv">
             <button id="plotbutton" type="button" class="btn btn-primary" disabled="disabled">Plot Map!</button>

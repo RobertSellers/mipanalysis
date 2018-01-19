@@ -24,9 +24,9 @@ $(document).ready(function() {
   
   //globals
   var dataframe;
-  var mapdata;
-  var joincode;
-  var countrycolumn;
+  // var mapdata;
+  // var joincode;
+  // var countrycolumn;
   
   //automatically upload CSV file on change.
   $("#mipfile").on("change", function(){
@@ -57,6 +57,7 @@ $(document).ready(function() {
         $("#uploadform").get(0).reset();      
       });
     }
+    debugger
   });
   
   // function datainfo(){
@@ -135,7 +136,7 @@ $(document).ready(function() {
     // }
   });
   
-  $("#plotdiv").resizable();
+  // $("#plotdiv").resizable();
   
   $(document).ajaxStart(function() {
     $(".progress").show();

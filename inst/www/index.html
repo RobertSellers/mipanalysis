@@ -80,7 +80,7 @@ function create_zip(temp){
     data_file = $(this).attr('href')+'R/.val/tab'
     
     var req = ocpu.call("mip_calculations", {
-        mipfile : data_file
+        mipfile : $("#mipfile")[0].files[0]   
       }, function(session){
         create_zip(data_file)
         //show plot here

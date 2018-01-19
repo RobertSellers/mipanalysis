@@ -43,6 +43,7 @@ $(document).ready(function() {
         mipfile : $("#mipfile")[0].files[0]   
       }, function(session){
         $("#convert_button").attr("href", session.getLoc() + "R/.val/csv")
+        $("#convert_button").removeAttr("disabled");
         // dataframe = session;
       }).fail(function(jqXHR){
         errormsg(jqXHR.responseText);

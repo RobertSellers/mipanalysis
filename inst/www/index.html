@@ -33,7 +33,6 @@ $(document).ready(function() {
 
     //verify that a file is selected
     if($("#mipfile")[0].files[0]){
-      myfile = $("#mipfile")[0].files[0]
 
       $("#successdiv").empty();
       $("#errordiv").empty()
@@ -41,7 +40,7 @@ $(document).ready(function() {
       
       //call uploaddata function
       var req = ocpu.call("uploaddata", {
-        file : myfile   
+        mipfile : $("#mipfile")[0].files[0]   
       }, function(session){
         // dataframe = session;
       }).fail(function(jqXHR){

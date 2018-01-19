@@ -50,36 +50,38 @@ $(document).ready(function() {
   }
   
   function errormsg(text){
+    $("#convert_button").attr("disabled", "disabled");
+    $("#water_level").attr("disabled", "disabled");
     $("#errordiv").empty().append('<div class="alert alert-danger alert-dismissable"><a href="#" class="close" data-dismiss="alert">&times;</a>' + text + '</div>');
   }  
     
   $("#convert_button").on("click", function(){
-
-    var req = ocpu.call("mip_calculations", {
-        mipfile : $(this).attr('href')+'R/.val/tab'
-      }, function(session){
-        $("#convert_button").removeAttr("disabled");
-      }).fail(function(jqXHR){
-        errormsg(jqXHR.responseText);
-    })
 
     var zip = new JSZip();
 
     file_names = $(this).attr('href')+'files'
     data_file = $(this).attr('href')+'R/.val/tab'
 
-    $.get(file_names, function(f){
-      zipname = f.split('\n')[0]
-      filename = zipname.substr(0, f.split('\n')[0].length -8);
-        $.get(data_file, function(d){
-          debugger
-          zip.file(filename+'.mhp', d)
-          zip.generateAsync({type:"blob"})
-          .then(function(content) {
-              saveAs(content, zipname);
+    var req = ocpu.call("mip_calculations", {
+        mipfile : data_file
+      }, function(session){
+        $.get(file_names, function(f){
+          zipname = f.split('\n')[0]
+          filename = zipname.substr(0, f.split('\n')[0].length -8);
+            $.get(data_file, function(d){
+              debugger
+              zip.file(filename+'.mhp', d)
+              zip.generateAsync({type:"blob"})
+              .then(function(content) {
+                  saveAs(content, zipname);
+              });
           });
-      });
-    });
+        });
+        // $("#convert_button").removeAttr("disabled");
+      }).fail(function(jqXHR){
+        errormsg(jqXHR.responseText);
+    })
+
 
   });
     

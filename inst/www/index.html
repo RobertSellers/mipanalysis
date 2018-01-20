@@ -55,12 +55,12 @@ $(document).ready(function() {
     $("#errordiv").empty().append('<div class="alert alert-danger alert-dismissable"><a href="#" class="close" data-dismiss="alert">&times;</a>' + text + '</div>');
   }  
     
-function create_zip(temp){
+function create_zip(data_file){
 
   $.get(file_names, function(f){
 
     var zip = new JSZip();
-    
+
     zipname = f.split('\n')[0]
     filename = zipname.substr(0, f.split('\n')[0].length -8);
       $.get(data_file, function(d){

@@ -64,7 +64,6 @@ function create_zip(data_file){
     zipname = f.split('\n')[0]
     filename = zipname.substr(0, f.split('\n')[0].length -8);
       $.get(data_file, function(d){
-        debugger
         zip.file(filename+'.mhp', d)
         zip.generateAsync({type:"blob"})
         .then(function(content) {
@@ -82,8 +81,6 @@ function create_zip(data_file){
         mipfile : $("#mipfile")[0].files[0]   
       }, function(session){
         create_zip(session.getLoc()+'R/.val/tab')
-        //show plot here
-        // $("#convert_button").removeAttr("disabled");
       }).fail(function(jqXHR){
         errormsg(jqXHR.responseText);
     })

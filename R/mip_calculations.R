@@ -1,4 +1,5 @@
 mip_calculations <- function(mipfile, ...){
+
     mhp_filename <- paste0(substr(basename(mipfile),0,nchar(basename(mipfile))-8),".mhp")
     mip_file_data <- read.table(unz(mipfile, mhp_filename), header=T, quote="\"", sep="\t")
 
@@ -36,7 +37,9 @@ mip_calculations <- function(mipfile, ...){
                     "HPT Line Press. Avg (kPa)",
                     "HPT Line Press. Max (kPa)",
                     "HPT Screen Depth (ft)")
+
     colnames(mip_file_data) <- col_names
-    mip_file_data$test = 0
+
     return(mip_file_data)
+
 }

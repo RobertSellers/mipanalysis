@@ -20,6 +20,12 @@
 <script src="main.js"> </script>
 
 <style>
+
+  #project_title{
+    color: #770000;
+    border-bottom: 1px solid #000000;
+  }
+
   #water_level{
     margin-left: 5px;
     padding-left: 5px;
@@ -40,30 +46,19 @@
       display: none;  
   }
 
-  fieldset { 
-    display: block;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding-top: 0.35em;
-    padding-bottom: 0.625em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    border: 2px groove (internal value);
-}
-
 </style>
 
 </head>
 
 <body>
-<div id="azimuth_container" class="container">
-    <h1 align ="center">
-        <img id="logo" src="images/icon.png">
-      </h1>
+<div id="azimuth_container">
+  <h1 align ="center">
+      <img id="logo" src="images/icon.png">
+  </h1>
   <div class="row">
     <div class="col-lg-3">
       <div class="well">
-        <h1>MIP Data Converter</h1>
+        <h1 id="project_title">MIP Data Converter</h1>
         <form role="form" id="uploadform" enctype="multipart/form-data">
           <fieldset>
             <legend>(1) Import MIP data</legend>

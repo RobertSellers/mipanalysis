@@ -20,6 +20,8 @@ $(document).ready(function() {
           $("#step_2").css("opacity", 1);
           $("#step_3").css("opacity", 1);
         }).fail(function(jqXHR){
+          $("#step_2").css("opacity", 0.2);
+          $("#step_3").css("opacity", 0.2);
           errormsg(jqXHR.responseText);
         })
       }

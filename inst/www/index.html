@@ -58,6 +58,9 @@ $(document).ready(function() {
 function create_zip(temp){
 
   $.get(file_names, function(f){
+
+    var zip = new JSZip();
+    
     zipname = f.split('\n')[0]
     filename = zipname.substr(0, f.split('\n')[0].length -8);
       $.get(data_file, function(d){
@@ -72,8 +75,6 @@ function create_zip(temp){
 }
 
   $("#convert_button").on("click", function(){
-
-    var zip = new JSZip();
 
     file_names = $(this).attr('href')+'files'
     

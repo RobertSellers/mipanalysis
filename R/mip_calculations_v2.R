@@ -1,4 +1,4 @@
-mip_calculations <- function(mipfile, water_level, ...){
+mip_calculations_v2 <- function(mipfile, water_level, ...){
 
     options(stringsAsFactors = FALSE)
 

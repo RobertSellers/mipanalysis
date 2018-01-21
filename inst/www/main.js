@@ -59,7 +59,7 @@ $(document).ready(function() {
   
       file_names = $(this).attr('href')+'files'
       
-      var req = ocpu.call("mip_calculations_v2", {
+      var req = ocpu.call("mip_calculations", {
           mipfile : $("#mipfile")[0].files[0],
           waterLevel : $('water_level').val()
         }, function(session){

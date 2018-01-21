@@ -1,14 +1,9 @@
-mip_calculations <- function(mipfile, water_level, ...){
-
-    options(stringsAsFactors = FALSE)
-
-    # #list files inside zip directory
-    fns <- unzip(mipfile, junkpaths = TRUE, exdir = tempdir())
+mip_calculations <- function(mipfile, ...){
 
     mhp_filename <- paste0(substr(basename(mipfile),0,nchar(basename(mipfile))-8),".mhp")
     mip_file_data <- read.table(unz(mipfile, mhp_filename), header=T, quote="\"", sep="\t")
 
-    col_names <- c("Depth (ft)",	
+    col_names <- c( "Depth (ft)",	
                     "EC (mS/m)",	
                     "ROP (ft/min)",	
                     "Temp. Min (deg C)",	
@@ -44,10 +39,6 @@ mip_calculations <- function(mipfile, water_level, ...){
                     "HPT Screen Depth (ft)")
 
     colnames(mip_file_data) <- col_names
-    mip_file_data[ mip_file_data == 'n/a' ] <- NA
-    mip_file_data <- sapply(mip_file_data, as.numeric)
-
-    mip_file_data$water_level <- water_level
 
     return(mip_file_data)
 

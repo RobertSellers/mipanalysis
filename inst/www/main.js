@@ -40,12 +40,12 @@ $(document).ready(function() {
       
   function create_zip(data_file){
     $.get(file_names, function(f){
-      debugger
       var zip = new JSZip();
       zipname = f.split('\n')[0]
       filename = zipname.substr(0, f.split('\n')[0].length -8);
         $.get(data_file, function(d){
-
+          //removing double quotes
+          d = d.replace(/['"]+/g, '').replace(/\//g, "$").replace(/\/n$a\:\w*$/,0);
           zip.file(filename+'.mhp', d)
           zip.generateAsync({type:"blob"})
           .then(function(content) {
@@ -59,8 +59,9 @@ $(document).ready(function() {
   
       file_names = $(this).attr('href')+'files'
       
-      var req = ocpu.call("mip_calculations", {
-          mipfile : $("#mipfile")[0].files[0]   
+      var req = ocpu.call("mip_calculations_v2", {
+          mipfile : $("#mipfile")[0].files[0],
+          waterLevel : $('water_level').val()
         }, function(session){
           create_zip(session.getLoc()+'R/.val/tab')
         }).fail(function(jqXHR){

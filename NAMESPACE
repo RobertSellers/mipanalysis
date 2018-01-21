@@ -1,3 +1,5 @@
 export(uploaddata)
+export(unzip_rezip)
 export(mip_calculations)
+export(mip_calculations_v2)
 importFrom(janitor, clean_names)

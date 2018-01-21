@@ -1,12 +1,29 @@
-mip_calculations <- function(mipfile, water_level, ...){
-
+unzip_rezip <- function(mipfile, ...){
+  
     options(stringsAsFactors = FALSE)
 
+    if(substring(tolower(mipfile), nchar(mipfile)-3) != ".zip"){
+        stop('Uploaded data needs to be .zip file. ');
+    }
+    
     # #list files inside zip directory
     fns <- unzip(mipfile, junkpaths = TRUE, exdir = tempdir())
 
-    mhp_filename <- paste0(substr(basename(mipfile),0,nchar(basename(mipfile))-8),".mhp")
-    mip_file_data <- read.table(unz(mipfile, mhp_filename), header=T, quote="\"", sep="\t")
+    # compress
+    res <- zip(zipfile=fz, files=names(fs), flags = flags)
+    # # cleanup
+    # lapply(names(fs), unlink)
+    # # return path
+    # attr(fz, "contentType") =  "application/zip"
+    # return(invisible(fz))
+
+    # zipack(mipfile, fns)
+
+    mhp_filename <- paste0(substr(basename(mipfile),0,nchar(basename(mipfile)) - 8),".mhp")
+    unzipped_file <- unz(mipfile, mhp_filename)
+    # temp <- tempfile(mipfile)
+    mip_file_data <- read.table(unzipped_file, header=T, quote="\"", sep="\t")
+
 
     col_names <- c("Depth (ft)",	
                     "EC (mS/m)",	
@@ -46,9 +63,5 @@ mip_calculations <- function(mipfile, water_level, ...){
     colnames(mip_file_data) <- col_names
     mip_file_data[ mip_file_data == 'n/a' ] <- NA
     mip_file_data <- sapply(mip_file_data, as.numeric)
-
-    mip_file_data$water_level <- water_level
-
-    return(mip_file_data)
 
 }

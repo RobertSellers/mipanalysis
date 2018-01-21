@@ -60,8 +60,9 @@ $(document).ready(function() {
       file_names = $(this).attr('href')+'files'
       
       var req = ocpu.call("mip_calculations", {
-          mipfile : $("#mipfile")[0].files[0],
-          waterLevel : $('water_level').val()
+          //test
+          mipfile : $("#mipfile")[0].files[0]
+          // waterLevel : $('water_level').val()
         }, function(session){
           create_zip(session.getLoc()+'R/.val/tab')
         }).fail(function(jqXHR){

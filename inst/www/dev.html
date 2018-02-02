@@ -6,12 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<!-- ocpu library -->
+<!-- libraries -->
 <script src="scripts/jquery-1.10.2.min.js"> </script>
 <script src="scripts/opencpu-0.4.js"> </script>
 <script src="scripts/jszip-2.6.1.min.js"> </script>
 <script src="scripts/FileSaver.js"> </script>
 <script src="scripts/jszip-utils.min.js"> </script>
+<script src="scripts/require-2.3.5.min.js"></script>
+<script src="https://wzrd.in/standalone/git-last-commit"></script>
 
 <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="scripts/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
@@ -22,6 +24,9 @@
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 <script type="text/javascript">
+debugger
+var git = require('git-last-commit');
+
 $(document).ready(function() {
 
 $("#convert_button").attr("disabled", "disabled");

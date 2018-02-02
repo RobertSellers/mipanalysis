@@ -44,7 +44,7 @@ $(document).ready(function() {
 
       var req = ocpu.call("zip_validation", {
           mipfile : $("#mipfile")[0].files[0]
-      }, function(session){
+      }, function(session,jqXHR){
           $("#session_url").removeAttr("disabled");
           $("#session_url").attr("href", session.getLoc()).attr("target","_blank")
           $("#convert_button").attr("href", session.getLoc())
@@ -53,7 +53,7 @@ $(document).ready(function() {
           $("#preview_button").removeAttr("disabled");
           $("#step_2").css("opacity", 1);
           $("#step_3").css("opacity", 1);
-          errormsg(jqXHR.responseText);
+          successmsg(jqXHR.responseText);
       }).fail(function(jqXHR){
           $("#step_2").css("opacity", 0.2);
           $("#step_3").css("opacity", 0.2);

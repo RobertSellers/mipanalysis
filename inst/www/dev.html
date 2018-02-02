@@ -12,8 +12,6 @@
 <script src="scripts/jszip-2.6.1.min.js"> </script>
 <script src="scripts/FileSaver.js"> </script>
 <script src="scripts/jszip-utils.min.js"> </script>
-<!-- <script src="scripts/require-2.3.5.min.js"></script> -->
-<script src="https://wzrd.in/standalone/git-last-commit"></script>
 
 <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="scripts/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
@@ -24,17 +22,15 @@
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 <script type="text/javascript">
-debugger
-// var git = require('git-last-commit');
 
 $(document).ready(function() {
 
-$("#convert_button").attr("disabled", "disabled");
-$("#preview_button").attr("disabled", "disabled");
-$("#water_level").attr("disabled", "disabled");
-$("#session_url").attr("disabled", "disabled");
-//automatically upload CSV file on change.
-$("#mipfile").on("change", function(){
+    $("#convert_button").attr("disabled", "disabled");
+    $("#preview_button").attr("disabled", "disabled");
+    $("#water_level").attr("disabled", "disabled");
+    $("#session_url").attr("disabled", "disabled");
+    //automatically upload CSV file on change.
+    $("#mipfile").on("change", function(){
 
   //verify that a file is selected
   if($("#mipfile")[0].files[0]){

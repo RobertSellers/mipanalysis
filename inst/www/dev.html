@@ -53,6 +53,7 @@ $(document).ready(function() {
           $("#preview_button").removeAttr("disabled");
           $("#step_2").css("opacity", 1);
           $("#step_3").css("opacity", 1);
+          errormsg(jqXHR.responseText);
       }).fail(function(jqXHR){
           $("#step_2").css("opacity", 0.2);
           $("#step_3").css("opacity", 0.2);
@@ -60,7 +61,6 @@ $(document).ready(function() {
       }).always(function(){
         var session_url = document.getElementById("session_url");
         session_url.style.cursor = "pointer";
-
     });
     }
 });

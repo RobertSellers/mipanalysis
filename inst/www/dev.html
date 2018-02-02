@@ -57,7 +57,9 @@ $("#mipfile").on("change", function(){
           $("#step_3").css("opacity", 0.2);
           errormsg(jqXHR.responseText);
       }).always(function(){
-        $("#session_url").attr("cursor", "pointer");
+        var session_url = document.getElementById("session_url");
+        session_url.style.cursor = "pointer";
+
     });
     }
 });

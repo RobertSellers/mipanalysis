@@ -1,11 +1,13 @@
 html, body {
-	background-color: #222;
-	height: 100%;
+	background-color: #757575;
 	width: 100%;
 	padding: 0;
 	margin: 0;
 }
-/* needs improvement */
+
+body{
+    height: 0% !important;
+}
 
 #azimuth_warning {
 	padding: 20px;
@@ -17,11 +19,19 @@ html, body {
 #step_3 {
 	opacity: 0.2;
 }
+
+#preview_button {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-left: 5px;
+    border-radius: 3px;
+}
+
 #user_input_panel {
 	font-family: 'Source Sans Pro', sans-serif;
 	margin-left: 20px;
 	height: 540px;
-  width: 420px;
+    width: 420px;
 	margin-bottom: 0px !important;
 }
 #plotdiv {

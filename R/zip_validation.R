@@ -6,8 +6,8 @@ zip_validation <- function(mipfile, ...){
     mhp_filename = fname[grep(".mhp", fname)]
     if(identical(mhp_filename, character(0))){
       stop('Zip file does not contain .mhp file');
+    }else{
+      cat(".zip file successfully loaded!")
     }
-  }else{
-    cat(".zip file successfully loaded!")
   }
 }

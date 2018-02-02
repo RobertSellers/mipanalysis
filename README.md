@@ -1,5 +1,5 @@
 # OpenCPU Application: MIHPT Log QA v6.7
-.zipped MIHPT Data Viewer and Converter Utility.
+.zipped MIHPT Data Viewer and Converter Utility
 
 To see this application live in action go to:
 

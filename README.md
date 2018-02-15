@@ -11,3 +11,5 @@ Run the app locally in R:
 library(opencpu)
 ocpu_start_app('Azimuth1/mihptcheck')
 ```
+
+test cloud server
